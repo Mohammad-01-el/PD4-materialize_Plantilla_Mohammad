@@ -4,7 +4,7 @@
      
     /* body fix: perquè ocupi tota la pantalla */
     html, body {
-        /* height: 100vh; */
+        height: 100vh;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -15,7 +15,7 @@
        * afegir la class tabs-content a cada div de contingut
        * per solucionar el contingut scollable de cada pestanya
        */
-      .tabs {
+      .tabs-content {
         height: 100%;
         overflow-y: scroll !important;
       }
