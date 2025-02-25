@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Modern Materialize App</title>
+    </head>
+
+    <body class="bg-gray-100">
+        <nav class="blue darken-3">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">My App</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="img/office.png">
+                    </div>
+                    <a href="#user"><img class="circle" src="img/usuario.png"></a>
+                    <a href="#name"><span class="white-text name">Jane Doe</span></a>
+                    <a href="#email"><span class="white-text email">janedoe@example.com</span></a>
+                </div>
+            </li>
+            <li><a href="#"><i class="material-icons">dashboard</i>Dashboard</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Settings</a></li>
+            <li><a class="waves-effect" href="#">Logout</a></li>
+        </ul>
+
+        <ul id="tabs-swipe-demo" class="tabs">
+            <li class="col s3"><a href="#" data-target="slide-out" class="sidenav-trigger"></a></li>
+            <li class="tab col s3"><a class="active" href="#tab1">Home</a></li>
+            <li class="tab col s3"><a href="#tab2">Services</a></li>
+            <li class="tab col s3"><a href="#tab3">Contact</a></li>
+        </ul>
+        <div id="tab1" class="col s12 blue lighten-4">Welcome to Home</div>
+        <div id="tab2" class="col s12 red lighten-4">Our Services</div>
+        <div id="tab3" class="col s12 green lighten-4">Get in Touch</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.sidenav');
+                M.Sidenav.init(elems);
+                var tabs = document.querySelectorAll('.tabs');
+                M.Tabs.init(tabs, { swipeable: true });
+            });
+        </script>
+    </body>
+
+</html>
